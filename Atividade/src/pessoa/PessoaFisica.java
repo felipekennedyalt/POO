@@ -27,13 +27,27 @@ public class PessoaFisica extends Pessoa{
     }
 
     @Override
-    public String treinar(String resposta) {
+    public boolean treinar(boolean resposta) {
 
-        if(resposta == "sim"){
-            return "vou para a academia!";
+        if(resposta == true){
+            return true;
         }else{
-           return "não vou para a academia!";
+           return false;
         }
+    }
+
+    /**
+     * @return the cpf
+     */
+    public String getCpf() {
+        return cpf;
+    }
+
+    /**
+     * @param cpf the cpf to set
+     */
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
     
     

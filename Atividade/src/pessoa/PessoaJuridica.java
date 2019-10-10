@@ -9,33 +9,43 @@ package pessoa;
  *
  * @author LABORATORIO 01
  */
-public class PessoaJuridica extends Pessoa{
+public class PessoaJuridica extends Pessoa {
 
     private String cnpj;
-    
-    
+
     @Override
     public double comprar(double saldo, double compra) {
-        if(compra < saldo){
+        if (compra < saldo) {
             System.out.println("Compra realizada com sucesso!");
             return compra - saldo;
-        }else{
+        } else {
             System.out.println("compra recusada!");
             return saldo;
         }
     }
 
     @Override
-    public String treinar(String resposta) {
+    public boolean treinar(boolean resposta) {
 
-        if(resposta == "sim"){
-            return "somos uma academia!";
-        }else{
-           return "não somos uma academia!";
+        if (resposta == true) {
+            return true;
+        } else {
+            return false;
         }
     }
-    
-    
-    
-    
+
+    /**
+     * @return the cnpj
+     */
+    public String getCnpj() {
+        return cnpj;
+    }
+
+    /**
+     * @param cnpj the cnpj to set
+     */
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
+    }
+
 }

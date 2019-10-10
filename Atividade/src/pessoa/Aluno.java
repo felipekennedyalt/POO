@@ -11,6 +11,7 @@ package pessoa;
  */
 public class Aluno extends Pessoa{
     
+    private String matricula;
     
     @Override
     public double comprar(double saldo, double compra) {
@@ -24,13 +25,27 @@ public class Aluno extends Pessoa{
     }
 
     @Override
-    public String treinar(String resposta) {
+    public boolean treinar(boolean resposta) {
 
-        if(resposta == "sim"){
-            return "vou para a academia!";
+        if(resposta == true){
+            return true;
         }else{
-           return "não vou para a academia!";
+           return false;
         }
+    }
+
+    /**
+     * @return the matricula
+     */
+    public String getMatricula() {
+        return matricula;
+    }
+
+    /**
+     * @param matricula the matricula to set
+     */
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
     }
     
     

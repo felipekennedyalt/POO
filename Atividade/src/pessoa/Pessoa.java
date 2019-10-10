@@ -17,7 +17,7 @@ public abstract class Pessoa {
 
     public abstract double comprar(double saldo, double compra);
 
-    public abstract String treinar(String resposta);
+    public abstract boolean treinar(boolean resposta);
     
     
     
